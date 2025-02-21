@@ -1,0 +1,43 @@
+
+import { motion } from "framer-motion";
+
+const Hero = () => {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-50 to-white px-4">
+      <div className="text-center max-w-4xl mx-auto">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-5xl sm:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600"
+        >
+          Transforming Your Business Through Innovation
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-lg sm:text-xl text-gray-600 mb-8"
+        >
+          Crafting beautiful, functional solutions for industries ranging from healthcare to e-commerce.
+          Let's bring your vision to life.
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="space-x-4"
+        >
+          <button className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors">
+            Learn More
+          </button>
+          <button className="border border-gray-300 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors">
+            Contact Us
+          </button>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default Hero;
