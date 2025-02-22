@@ -39,7 +39,24 @@ const FAQs = () => {
                 What services does HR Innovations offer?
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4">
-                HR Innovations provides comprehensive HR solutions including recruitment and talent acquisition, HR policy development, employee training and development, performance management systems, HR compliance consulting, and HR technology implementation. We also offer specialized services in organizational development and workplace culture transformation.
+                <p className="mb-4">At HR Innovations, we believe in transforming the workplace experience. Our services include:</p>
+                <ul className="space-y-3">
+                  <li className="pl-4 border-l-2 border-primary">
+                    <strong>Comprehensive Talent Acquisition:</strong> We use advanced AI tools to match the right candidates to the right roles, ensuring a perfect fit.
+                  </li>
+                  <li className="pl-4 border-l-2 border-primary">
+                    <strong>Employee Development Programs:</strong> We offer customized training and development programs designed to enhance skills and promote career growth.
+                  </li>
+                  <li className="pl-4 border-l-2 border-primary">
+                    <strong>HR Consulting:</strong> Our expert consultants provide strategic advice on organizational development, compliance, and HR best practices.
+                  </li>
+                  <li className="pl-4 border-l-2 border-primary">
+                    <strong>Employee Well-being Initiatives:</strong> We implement wellness programs that promote physical, mental, and emotional health.
+                  </li>
+                  <li className="pl-4 border-l-2 border-primary">
+                    <strong>Tech-Driven HR Solutions:</strong> From automated payroll systems to AI-driven performance reviews, we leverage cutting-edge technology to streamline HR processes.
+                  </li>
+                </ul>
               </AccordionContent>
             </AccordionItem>
 
@@ -48,7 +65,24 @@ const FAQs = () => {
                 How do you ensure project success?
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4">
-                We ensure project success through a comprehensive approach that includes detailed initial assessment, clear project milestones, regular client communication, and continuous monitoring of KPIs. Our experienced team follows industry best practices and uses advanced HR analytics to track progress and make data-driven decisions. We also provide regular progress reports and maintain transparent communication throughout the project lifecycle.
+                <p className="mb-4">Success is in our DNA. We ensure project success by:</p>
+                <ul className="space-y-3">
+                  <li className="pl-4 border-l-2 border-primary">
+                    <strong>Personalized Approach:</strong> We tailor our solutions to meet the unique needs of each client, ensuring relevance and effectiveness.
+                  </li>
+                  <li className="pl-4 border-l-2 border-primary">
+                    <strong>Data-Driven Decisions:</strong> Our strategies are backed by robust data analytics and insights, allowing us to make informed decisions.
+                  </li>
+                  <li className="pl-4 border-l-2 border-primary">
+                    <strong>Collaborative Process:</strong> We work closely with our clients, fostering a collaborative environment where feedback is valued and incorporated.
+                  </li>
+                  <li className="pl-4 border-l-2 border-primary">
+                    <strong>Continuous Improvement:</strong> We adopt an iterative approach, constantly refining our methods and solutions based on real-time feedback and results.
+                  </li>
+                  <li className="pl-4 border-l-2 border-primary">
+                    <strong>Expertise and Innovation:</strong> Our team of seasoned professionals brings a wealth of experience and innovative thinking to every project.
+                  </li>
+                </ul>
               </AccordionContent>
             </AccordionItem>
 
@@ -57,7 +91,17 @@ const FAQs = () => {
                 What industries do you serve?
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4">
-                We serve a diverse range of industries including technology, healthcare, manufacturing, retail, financial services, and professional services. Our solutions are tailored to meet the specific HR challenges and requirements of each industry, while incorporating industry-specific compliance requirements and best practices.
+                <p className="mb-4">HR Innovations proudly serves a diverse range of industries, including:</p>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <li className="pl-4 border-l-2 border-primary">Technology and IT</li>
+                  <li className="pl-4 border-l-2 border-primary">Healthcare and Pharmaceuticals</li>
+                  <li className="pl-4 border-l-2 border-primary">Financial Services</li>
+                  <li className="pl-4 border-l-2 border-primary">Manufacturing and Engineering</li>
+                  <li className="pl-4 border-l-2 border-primary">Retail and E-commerce</li>
+                  <li className="pl-4 border-l-2 border-primary">Education and Non-profits</li>
+                  <li className="pl-4 border-l-2 border-primary">Hospitality and Tourism</li>
+                  <li className="pl-4 border-l-2 border-primary">Construction and Real Estate</li>
+                </ul>
               </AccordionContent>
             </AccordionItem>
 
@@ -66,16 +110,9 @@ const FAQs = () => {
                 How long does a typical project take?
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4">
-                Project timelines vary depending on scope and complexity. Small-scale implementations typically take 4-6 weeks, while comprehensive HR transformations may take 3-6 months. During our initial consultation, we'll provide a detailed project timeline based on your specific requirements and objectives. We always aim to deliver efficient solutions while ensuring quality and thoroughness.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-5" className="bg-white rounded-lg shadow-sm">
-              <AccordionTrigger className="px-6 py-4 hover:no-underline">
-                Do you provide ongoing support?
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4">
-                Yes, we offer comprehensive ongoing support through various service packages. This includes regular system maintenance, updates to HR policies and procedures, continuous training support, periodic reviews and assessments, and dedicated customer support. We also provide emergency consultation services for urgent HR matters.
+                <p>
+                  We approach each project with agile methodology, which allows us to seamlessly adapt and evolve to meet our customers' expectations. It's not about rigid timelines; it's about creating a dynamic environment where collaboration, innovation, and flexibility thrive. By focusing on continuous improvement and delivering value at every stage, we ensure that the final product is not just satisfactory but truly exceptional.
+                </p>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
