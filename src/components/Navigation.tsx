@@ -15,7 +15,7 @@ const Navigation = () => {
             HR Innovations
           </Link>
           <div className="hidden sm:flex space-x-8">
-            {["Why Us", "Contact", "FAQs"].map((item) => (
+            {["Why Us", "Join Us", "Contact", "FAQs"].map((item) => (
               <Link
                 key={item}
                 to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
