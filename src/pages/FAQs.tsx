@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import { motion } from "framer-motion";
 import {
@@ -39,22 +38,42 @@ const FAQs = () => {
                 What services does HR Innovations offer?
               </AccordionTrigger>
               <AccordionContent className="px-6 pb-4">
-                <p className="mb-4">At HR Innovations, we believe in transforming the workplace experience. Our services include:</p>
                 <ul className="space-y-3">
-                  <li className="pl-4 border-l-2 border-primary">
-                    <strong>Comprehensive Talent Acquisition:</strong> We use advanced AI tools to match the right candidates to the right roles, ensuring a perfect fit.
+                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
+                    <span>🎨</span> <div><strong>Stunning Web Designs:</strong> Experience the magic of beautiful, user-friendly layouts that captivate your audience and keep them engaged.</div>
                   </li>
-                  <li className="pl-4 border-l-2 border-primary">
-                    <strong>Employee Development Programs:</strong> We offer customized training and development programs designed to enhance skills and promote career growth.
+                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
+                    <span>📱</span> <div><strong>Responsive Designs:</strong> Enjoy flawless performance across all devices, ensuring your website looks great and functions perfectly on desktops, tablets, and mobile phones.</div>
                   </li>
-                  <li className="pl-4 border-l-2 border-primary">
-                    <strong>HR Consulting:</strong> Our expert consultants provide strategic advice on organizational development, compliance, and HR best practices.
+                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
+                    <span>✨</span> <div><strong>UI/UX Magic:</strong> Delight your visitors with intuitive and seamless navigation, making their journey through your website a pleasure.</div>
                   </li>
-                  <li className="pl-4 border-l-2 border-primary">
-                    <strong>Employee Well-being Initiatives:</strong> We implement wellness programs that promote physical, mental, and emotional health.
+                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
+                    <span>💻</span> <div><strong>Web Development:</strong> Harness the power of HTML, CSS, JavaScript, and more to create a website that's not only visually stunning but also highly functional.</div>
                   </li>
-                  <li className="pl-4 border-l-2 border-primary">
-                    <strong>Tech-Driven HR Solutions:</strong> From automated payroll systems to AI-driven performance reviews, we leverage cutting-edge technology to streamline HR processes.
+                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
+                    <span>🛠️</span> <div><strong>CMS Integration:</strong> Easily manage and update your website with popular platforms like WordPress, Joomla, and others. No technical expertise required!</div>
+                  </li>
+                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
+                    <span>🛒</span> <div><strong>E-commerce Solutions:</strong> Boost your sales with powerful online stores that integrate seamlessly with payment gateways, making it easy for your customers to shop.</div>
+                  </li>
+                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
+                    <span>🚀</span> <div><strong>SEO Boosts:</strong> Achieve higher search engine rankings and increase your visibility with our expert SEO optimization services.</div>
+                  </li>
+                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
+                    <span>🔧</span> <div><strong>Maintenance Services:</strong> Count on reliable support and regular updates to keep your website secure, functional, and up-to-date.</div>
+                  </li>
+                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
+                    <span>🎨</span> <div><strong>Graphic Design:</strong> Stand out with eye-catching logos, banners, and visuals that perfectly align with your brand identity.</div>
+                  </li>
+                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
+                    <span>🖋️</span> <div><strong>Content Creation:</strong> Engage your audience with high-quality text, images, and videos that convey your message effectively.</div>
+                  </li>
+                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
+                    <span>🌐</span> <div><strong>Web Hosting:</strong> Ensure fast and reliable website access with our top-notch hosting services, providing you with the best performance and uptime.</div>
+                  </li>
+                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
+                    <span>💡</span> <div><strong>Strategic Consultation:</strong> Receive expert advice on digital strategy, including website goals, target audience, and marketing tactics to achieve your business objectives.</div>
                   </li>
                 </ul>
               </AccordionContent>
