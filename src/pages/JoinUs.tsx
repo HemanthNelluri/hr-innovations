@@ -2,9 +2,37 @@
 import Navigation from "@/components/Navigation";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Code, Globe, Heart, Rocket, Users } from "lucide-react";
+import { Code, Globe, Heart, Rocket, Users, Upload } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { useState } from "react";
+import { toast } from "sonner";
 
 const JoinUs = () => {
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    // Check file type
+    if (file.type !== 'application/pdf') {
+      toast.error('Please upload only PDF files');
+      event.target.value = '';
+      return;
+    }
+
+    // Check file size (10MB = 10 * 1024 * 1024 bytes)
+    if (file.size > 10 * 1024 * 1024) {
+      toast.error('File size should not exceed 10MB');
+      event.target.value = '';
+      return;
+    }
+
+    setSelectedFile(file);
+    toast.success('Resume uploaded successfully');
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
@@ -78,11 +106,43 @@ const JoinUs = () => {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <Heart className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                <Globe className="h-6 w-6 text-blue-600 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold mb-2">Health & Wellness</h3>
-                  <p className="text-gray-600">Comprehensive health coverage and wellness programs</p>
+                  <h3 className="font-semibold mb-2">Remote Work</h3>
+                  <p className="text-gray-600">Work from anywhere in the world with our distributed team</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Resume Upload Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+        >
+          <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+            <h2 className="text-2xl font-bold mb-6 text-center">Upload Your Resume</h2>
+            <div className="max-w-md mx-auto">
+              <div className="space-y-4">
+                <Label htmlFor="resume">Resume (PDF only, max 10MB)</Label>
+                <div className="flex items-center space-x-4">
+                  <Input
+                    id="resume"
+                    type="file"
+                    accept=".pdf"
+                    onChange={handleFileChange}
+                    className="file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                  />
+                  <Upload className="h-5 w-5 text-gray-400" />
+                </div>
+                {selectedFile && (
+                  <p className="text-sm text-gray-600">
+                    Selected file: {selectedFile.name}
+                  </p>
+                )}
               </div>
             </div>
           </div>
