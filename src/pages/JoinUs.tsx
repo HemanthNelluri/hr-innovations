@@ -147,35 +147,6 @@ const JoinUs = () => {
             </div>
           </div>
         </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-        >
-          <h2 className="text-3xl font-bold mb-6">Ready to Make an Impact?</h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Join us in our mission to empower SMBs with innovative digital solutions.
-          </p>
-          <div className="space-x-4">
-            <Button
-              size="lg"
-              className="bg-blue-600 hover:bg-blue-700"
-              onClick={() => window.location.href = '/contact'}
-            >
-              Apply Now
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => window.location.href = '/why-us'}
-            >
-              Learn More
-            </Button>
-          </div>
-        </motion.div>
       </div>
     </div>
   );
