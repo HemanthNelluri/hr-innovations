@@ -11,13 +11,13 @@ const Index = () => {
       className="min-h-screen bg-white relative"
       style={{
         backgroundImage: 'url("/lovable-uploads/028c6b24-c0c1-4c47-9463-cf1e51a28e85.png")',
-        backgroundSize: '80%',
+        backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
+        backgroundRepeat: 'repeat',
         backgroundColor: 'white'
       }}
     >
-      <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-white/60 backdrop-blur-[2px]"></div>
       <div className="relative z-10">
         <Navigation />
         <Hero />
