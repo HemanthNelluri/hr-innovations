@@ -7,19 +7,16 @@ import { motion } from "framer-motion";
 
 const Index = () => {
   return (
-    <div 
-      className="min-h-screen bg-white relative"
-      style={{
-        backgroundImage: 'url("/lovable-uploads/028c6b24-c0c1-4c47-9463-cf1e51a28e85.png")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'repeat',
-        backgroundColor: 'white'
-      }}
-    >
-      <div className="absolute inset-0 bg-white/60 backdrop-blur-[2px]"></div>
+    <div className="min-h-screen bg-white relative">
       <div className="relative z-10">
         <Navigation />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
+          <img 
+            src="/lovable-uploads/bd84d8d9-cdc0-4390-a933-da7b0f4f150e.png" 
+            alt="HR Innovations Logo" 
+            className="w-[600px] h-auto"
+          />
+        </div>
         <Hero />
         <CoreValues />
         <Services />
