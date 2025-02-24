@@ -7,10 +7,30 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { HelpCircle, Search, Plus, Minus } from "lucide-react";
 
 const FAQs = () => {
+  const faqs = [
+    {
+      question: "What services does HR Innovations offer?",
+      answer: "HR Innovations offers a comprehensive suite of digital transformation services, including strategic consulting, digital roadmaps, business process optimization, and customized transformation strategies."
+    },
+    {
+      question: "How long does a typical project take?",
+      answer: "Project timelines vary based on scope and complexity. Typically, our projects range from 3-6 months, but we work closely with clients to establish realistic timelines that meet their specific needs."
+    },
+    {
+      question: "Do you offer ongoing support?",
+      answer: "Yes, we provide continuous support and maintenance services after project completion. Our team remains available to address any issues and implement updates as needed."
+    },
+    {
+      question: "What industries do you serve?",
+      answer: "We serve a wide range of industries including healthcare, finance, retail, manufacturing, and technology. Our solutions are customized to meet industry-specific requirements."
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-white via-blue-50/30 to-white">
       <Navigation />
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
         <img 
@@ -26,11 +46,19 @@ const FAQs = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#1EAEDB] to-[#ea384c]">
+          <motion.div
+            initial={{ scale: 0.95 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="inline-block mb-6"
+          >
+            <HelpCircle className="w-16 h-16 text-[#1EAEDB] animate-pulse" />
+          </motion.div>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#1EAEDB] via-[#4a90e2] to-[#ea384c]">
             Frequently Asked Questions
           </h1>
-          <p className="text-xl text-gray-600">
-            Find answers to common questions about our services
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Find answers to common questions about our services and discover how we can help transform your business
           </p>
         </motion.div>
 
@@ -38,111 +66,55 @@ const FAQs = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-3xl mx-auto mt-16"
+          className="max-w-3xl mx-auto mt-16 space-y-6"
         >
-          <Accordion type="single" collapsible className="space-y-4">
-            <AccordionItem value="item-1" className="bg-white rounded-lg shadow-sm">
-              <AccordionTrigger className="px-6 py-4 hover:no-underline">
-                What services does HR Innovations offer?
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4">
-                <ul className="space-y-3">
-                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
-                    <span>🎨</span> <div><strong>Stunning Web Designs:</strong> Experience the magic of beautiful, user-friendly layouts that captivate your audience and keep them engaged.</div>
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
-                    <span>📱</span> <div><strong>Responsive Designs:</strong> Enjoy flawless performance across all devices, ensuring your website looks great and functions perfectly on desktops, tablets, and mobile phones.</div>
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
-                    <span>✨</span> <div><strong>UI/UX Magic:</strong> Delight your visitors with intuitive and seamless navigation, making their journey through your website a pleasure.</div>
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
-                    <span>💻</span> <div><strong>Web Development:</strong> Harness the power of HTML, CSS, JavaScript, and more to create a website that's not only visually stunning but also highly functional.</div>
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
-                    <span>🛠️</span> <div><strong>CMS Integration:</strong> Easily manage and update your website with popular platforms like WordPress, Joomla, and others. No technical expertise required!</div>
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
-                    <span>🛒</span> <div><strong>E-commerce Solutions:</strong> Boost your sales with powerful online stores that integrate seamlessly with payment gateways, making it easy for your customers to shop.</div>
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
-                    <span>🚀</span> <div><strong>SEO Boosts:</strong> Achieve higher search engine rankings and increase your visibility with our expert SEO optimization services.</div>
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
-                    <span>🔧</span> <div><strong>Maintenance Services:</strong> Count on reliable support and regular updates to keep your website secure, functional, and up-to-date.</div>
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
-                    <span>🎨</span> <div><strong>Graphic Design:</strong> Stand out with eye-catching logos, banners, and visuals that perfectly align with your brand identity.</div>
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
-                    <span>🖋️</span> <div><strong>Content Creation:</strong> Engage your audience with high-quality text, images, and videos that convey your message effectively.</div>
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
-                    <span>🌐</span> <div><strong>Web Hosting:</strong> Ensure fast and reliable website access with our top-notch hosting services, providing you with the best performance and uptime.</div>
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary flex items-start gap-3">
-                    <span>💡</span> <div><strong>Strategic Consultation:</strong> Receive expert advice on digital strategy, including website goals, target audience, and marketing tactics to achieve your business objectives.</div>
-                  </li>
-                </ul>
-              </AccordionContent>
-            </AccordionItem>
+          {faqs.map((faq, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Accordion type="single" collapsible className="bg-white/80 backdrop-blur-sm rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <AccordionItem value={`item-${index}`} className="border-none">
+                  <AccordionTrigger className="px-6 py-4 hover:bg-blue-50/50 transition-colors rounded-t-lg text-left">
+                    <div className="flex items-center gap-3">
+                      <Search className="w-5 h-5 text-[#1EAEDB]" />
+                      <span className="text-lg font-medium">{faq.question}</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 py-4 text-gray-600 bg-gradient-to-r from-blue-50/20 to-transparent">
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {faq.answer}
+                    </motion.div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </motion.div>
+          ))}
+        </motion.div>
 
-            <AccordionItem value="item-2" className="bg-white rounded-lg shadow-sm">
-              <AccordionTrigger className="px-6 py-4 hover:no-underline">
-                How do you ensure project success?
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4">
-                <p className="mb-4">Success is in our DNA. We ensure project success by:</p>
-                <ul className="space-y-3">
-                  <li className="pl-4 border-l-2 border-primary">
-                    <strong>Personalized Approach:</strong> We tailor our solutions to meet the unique needs of each client, ensuring relevance and effectiveness.
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary">
-                    <strong>Data-Driven Decisions:</strong> Our strategies are backed by robust data analytics and insights, allowing us to make informed decisions.
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary">
-                    <strong>Collaborative Process:</strong> We work closely with our clients, fostering a collaborative environment where feedback is valued and incorporated.
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary">
-                    <strong>Continuous Improvement:</strong> We adopt an iterative approach, constantly refining our methods and solutions based on real-time feedback and results.
-                  </li>
-                  <li className="pl-4 border-l-2 border-primary">
-                    <strong>Expertise and Innovation:</strong> Our team of seasoned professionals brings a wealth of experience and innovative thinking to every project.
-                  </li>
-                </ul>
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-3" className="bg-white rounded-lg shadow-sm">
-              <AccordionTrigger className="px-6 py-4 hover:no-underline">
-                What industries do you serve?
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4">
-                <p className="mb-4">HR Innovations proudly serves a diverse range of industries, including:</p>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <li className="pl-4 border-l-2 border-primary">Technology and IT</li>
-                  <li className="pl-4 border-l-2 border-primary">Healthcare and Pharmaceuticals</li>
-                  <li className="pl-4 border-l-2 border-primary">Financial Services</li>
-                  <li className="pl-4 border-l-2 border-primary">Manufacturing and Engineering</li>
-                  <li className="pl-4 border-l-2 border-primary">Retail and E-commerce</li>
-                  <li className="pl-4 border-l-2 border-primary">Education and Non-profits</li>
-                  <li className="pl-4 border-l-2 border-primary">Hospitality and Tourism</li>
-                  <li className="pl-4 border-l-2 border-primary">Construction and Real Estate</li>
-                </ul>
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-4" className="bg-white rounded-lg shadow-sm">
-              <AccordionTrigger className="px-6 py-4 hover:no-underline">
-                How long does a typical project take?
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4">
-                <p>
-                  We approach each project with agile methodology, which allows us to seamlessly adapt and evolve to meet our customers' expectations. It's not about rigid timelines; it's about creating a dynamic environment where collaboration, innovation, and flexibility thrive. By focusing on continuous improvement and delivering value at every stage, we ensure that the final product is not just satisfactory but truly exceptional.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="max-w-3xl mx-auto mt-16 text-center"
+        >
+          <p className="text-gray-600">
+            Still have questions? {" "}
+            <motion.a
+              href="/contact"
+              className="text-[#1EAEDB] font-medium hover:text-[#ea384c] transition-colors relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#ea384c] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+              whileHover={{ y: -2 }}
+              transition={{ duration: 0.2 }}
+            >
+              Contact our team
+            </motion.a>
+          </p>
         </motion.div>
       </div>
     </div>
