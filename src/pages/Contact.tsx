@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import { motion } from "framer-motion";
@@ -20,7 +19,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
     console.log("Form submitted:", formData);
     toast({
       title: "Message sent!",
@@ -46,8 +44,15 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       <Navigation />
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
+        <img 
+          src="/lovable-uploads/bd84d8d9-cdc0-4390-a933-da7b0f4f150e.png" 
+          alt="HR Innovations Logo" 
+          className="w-[600px] h-auto"
+        />
+      </div>
       <div className="pt-24 pb-16 px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -55,7 +60,9 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Contact Us</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#1EAEDB] to-[#ea384c]">
+            Contact Us
+          </h1>
           <p className="text-xl text-gray-600">
             Let's discuss how we can help transform your business
           </p>
@@ -130,7 +137,10 @@ const Contact = () => {
               />
             </div>
 
-            <Button type="submit" className="w-full">
+            <Button 
+              type="submit" 
+              className="w-full bg-[#1EAEDB] hover:bg-[#0FA0CE] text-white"
+            >
               Send Message
             </Button>
           </form>

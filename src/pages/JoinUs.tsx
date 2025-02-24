@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -34,17 +33,23 @@ const JoinUs = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       <Navigation />
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
+        <img 
+          src="/lovable-uploads/bd84d8d9-cdc0-4390-a933-da7b0f4f150e.png" 
+          alt="HR Innovations Logo" 
+          className="w-[600px] h-auto"
+        />
+      </div>
       <div className="pt-24 pb-16">
-        {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16"
         >
-          <h1 className="text-5xl sm:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">
+          <h1 className="text-5xl sm:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#1EAEDB] to-[#ea384c]">
             Join Our Mission
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -52,7 +57,6 @@ const JoinUs = () => {
           </p>
         </motion.div>
 
-        {/* Mission Cards */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -81,7 +85,6 @@ const JoinUs = () => {
           </div>
         </motion.div>
 
-        {/* Benefits Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -116,7 +119,6 @@ const JoinUs = () => {
           </div>
         </motion.div>
 
-        {/* Resume Upload Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -124,7 +126,7 @@ const JoinUs = () => {
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
         >
           <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
-            <h2 className="text-2xl font-bold mb-6 text-center">Upload Your Resume</h2>
+            <h2 className="text-2xl font-bold mb-6 text-center text-[#1EAEDB]">Upload Your Resume</h2>
             <div className="max-w-md mx-auto">
               <div className="space-y-4">
                 <Label htmlFor="resume">Resume (PDF only, max 10MB)</Label>
