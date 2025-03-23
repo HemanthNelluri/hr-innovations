@@ -1,5 +1,6 @@
 
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -28,12 +29,16 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="space-x-4"
         >
-          <button className="bg-[#1EAEDB] text-white px-8 py-3 rounded-lg hover:bg-[#0FA0CE] transition-colors">
-            Learn More
-          </button>
-          <button className="border border-[#ea384c] text-[#ea384c] px-8 py-3 rounded-lg hover:bg-[#ea384c] hover:text-white transition-colors">
-            Contact Us
-          </button>
+          <Link to="/why-us">
+            <button className="bg-[#1EAEDB] text-white px-8 py-3 rounded-lg hover:bg-[#0FA0CE] transition-colors">
+              Learn More
+            </button>
+          </Link>
+          <Link to="/contact">
+            <button className="border border-[#ea384c] text-[#ea384c] px-8 py-3 rounded-lg hover:bg-[#ea384c] hover:text-white transition-colors">
+              Contact Us
+            </button>
+          </Link>
         </motion.div>
       </div>
     </div>
