@@ -3,67 +3,8 @@ import Navigation from "@/components/Navigation";
 import { motion } from "framer-motion";
 import { Code, Globe, Heart, Rocket, Users } from "lucide-react";
 import BackgroundLogo from "@/components/contact/BackgroundLogo";
-import { useEffect } from "react";
 
 const JoinUs = () => {
-  useEffect(() => {
-    // Create and append the Zoho form script
-    const script = document.createElement("script");
-    script.type = "text/javascript";
-    script.innerHTML = `
-      (function() {
-        try{
-          var f = document.createElement("iframe");
-          f.src = 'https://forms.zohopublic.in/adminhrinno1/form/JobApplication/formperma/KGC6qb-9HNSJgQgGjt4uZWib6W2XvE7-MJOwne74OJ8?zf_rszfm=1';
-          f.style.border="none";
-          f.style.height="1409px";
-          f.style.width="90%";
-          f.style.transition="all 0.5s ease";
-          f.setAttribute("aria-label", 'Job\\x20Application');
-
-          var d = document.getElementById("zf_div_KGC6qb-9HNSJgQgGjt4uZWib6W2XvE7-MJOwne74OJ8");
-          d.appendChild(f);
-          window.addEventListener('message', function (){
-            var evntData = event.data;
-            if( evntData && evntData.constructor == String ){
-              var zf_ifrm_data = evntData.split("|");
-              if ( zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3 ) {
-                var zf_perma = zf_ifrm_data[0];
-                var zf_ifrm_ht_nw = ( parseInt(zf_ifrm_data[1], 10) + 15 ) + "px";
-                var iframe = document.getElementById("zf_div_KGC6qb-9HNSJgQgGjt4uZWib6W2XvE7-MJOwne74OJ8").getElementsByTagName("iframe")[0];
-                if ( (iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0 ) {
-                  var prevIframeHeight = iframe.style.height;
-                  var zf_tout = false;
-                  if( zf_ifrm_data.length == 3 ) {
-                    iframe.scrollIntoView();
-                    zf_tout = true;
-                  }
-                  if ( prevIframeHeight != zf_ifrm_ht_nw ) {
-                    if( zf_tout ) {
-                      setTimeout(function(){
-                        iframe.style.height = zf_ifrm_ht_nw;
-                      },500);
-                    } else {
-                      iframe.style.height = zf_ifrm_ht_nw;
-                    }
-                  }
-                }
-              }
-            }
-          }, false);
-        }catch(e){}
-      })();
-    `;
-
-    // Clean up function to remove the script when component unmounts
-    return () => {
-      const scriptElement = document.querySelector('script[data-zoho-form]');
-      if (scriptElement) {
-        scriptElement.remove();
-      }
-    };
-  }, []);
-
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -149,9 +90,12 @@ const JoinUs = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 flex justify-center"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center"
         >
-          <div id="zf_div_KGC6qb-9HNSJgQgGjt4uZWib6W2XvE7-MJOwne74OJ8" className="w-full flex justify-center"></div>
+          <h2 className="text-3xl font-bold mb-6">Interested in Joining Our Team?</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Send your resume and cover letter to <span className="font-semibold text-blue-600">careers@company.com</span>
+          </p>
         </motion.div>
       </div>
     </div>
