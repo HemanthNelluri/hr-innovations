@@ -1,47 +1,73 @@
+
 import Navigation from "@/components/Navigation";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Code, Globe, Heart, Rocket, Users, Upload } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { useState } from "react";
-import { toast } from "sonner";
+import { Code, Globe, Heart, Rocket, Users } from "lucide-react";
+import BackgroundLogo from "@/components/contact/BackgroundLogo";
+import { useEffect } from "react";
 
 const JoinUs = () => {
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  useEffect(() => {
+    // Create and append the Zoho form script
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.innerHTML = `
+      (function() {
+        try{
+          var f = document.createElement("iframe");
+          f.src = 'https://forms.zohopublic.in/adminhrinno1/form/JobApplication/formperma/KGC6qb-9HNSJgQgGjt4uZWib6W2XvE7-MJOwne74OJ8?zf_rszfm=1';
+          f.style.border="none";
+          f.style.height="1409px";
+          f.style.width="90%";
+          f.style.transition="all 0.5s ease";
+          f.setAttribute("aria-label", 'Job\\x20Application');
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
+          var d = document.getElementById("zf_div_KGC6qb-9HNSJgQgGjt4uZWib6W2XvE7-MJOwne74OJ8");
+          d.appendChild(f);
+          window.addEventListener('message', function (){
+            var evntData = event.data;
+            if( evntData && evntData.constructor == String ){
+              var zf_ifrm_data = evntData.split("|");
+              if ( zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3 ) {
+                var zf_perma = zf_ifrm_data[0];
+                var zf_ifrm_ht_nw = ( parseInt(zf_ifrm_data[1], 10) + 15 ) + "px";
+                var iframe = document.getElementById("zf_div_KGC6qb-9HNSJgQgGjt4uZWib6W2XvE7-MJOwne74OJ8").getElementsByTagName("iframe")[0];
+                if ( (iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0 ) {
+                  var prevIframeHeight = iframe.style.height;
+                  var zf_tout = false;
+                  if( zf_ifrm_data.length == 3 ) {
+                    iframe.scrollIntoView();
+                    zf_tout = true;
+                  }
+                  if ( prevIframeHeight != zf_ifrm_ht_nw ) {
+                    if( zf_tout ) {
+                      setTimeout(function(){
+                        iframe.style.height = zf_ifrm_ht_nw;
+                      },500);
+                    } else {
+                      iframe.style.height = zf_ifrm_ht_nw;
+                    }
+                  }
+                }
+              }
+            }
+          }, false);
+        }catch(e){}
+      })();
+    `;
 
-    // Check file type
-    if (file.type !== 'application/pdf') {
-      toast.error('Please upload only PDF files');
-      event.target.value = '';
-      return;
-    }
-
-    // Check file size (10MB = 10 * 1024 * 1024 bytes)
-    if (file.size > 10 * 1024 * 1024) {
-      toast.error('File size should not exceed 10MB');
-      event.target.value = '';
-      return;
-    }
-
-    setSelectedFile(file);
-    toast.success('Resume uploaded successfully');
-  };
+    // Clean up function to remove the script when component unmounts
+    return () => {
+      const scriptElement = document.querySelector('script[data-zoho-form]');
+      if (scriptElement) {
+        scriptElement.remove();
+      }
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
-        <img 
-          src="/lovable-uploads/bd84d8d9-cdc0-4390-a933-da7b0f4f150e.png" 
-          alt="HR Innovations Logo" 
-          className="w-[600px] h-auto"
-        />
-      </div>
+      <BackgroundLogo />
       <div className="pt-24 pb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -123,31 +149,9 @@ const JoinUs = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 flex justify-center"
         >
-          <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
-            <h2 className="text-2xl font-bold mb-6 text-center text-[#1EAEDB]">Upload Your Resume</h2>
-            <div className="max-w-md mx-auto">
-              <div className="space-y-4">
-                <Label htmlFor="resume">Resume (PDF only, max 10MB)</Label>
-                <div className="flex items-center space-x-4">
-                  <Input
-                    id="resume"
-                    type="file"
-                    accept=".pdf"
-                    onChange={handleFileChange}
-                    className="file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
-                  />
-                  <Upload className="h-5 w-5 text-gray-400" />
-                </div>
-                {selectedFile && (
-                  <p className="text-sm text-gray-600">
-                    Selected file: {selectedFile.name}
-                  </p>
-                )}
-              </div>
-            </div>
-          </div>
+          <div id="zf_div_KGC6qb-9HNSJgQgGjt4uZWib6W2XvE7-MJOwne74OJ8" className="w-full flex justify-center"></div>
         </motion.div>
       </div>
     </div>
