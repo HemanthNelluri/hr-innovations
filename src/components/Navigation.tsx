@@ -1,8 +1,18 @@
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Menu } from "lucide-react";
+import { useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Navigation = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMobile = useIsMobile();
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <motion.nav 
       initial={{ y: -20, opacity: 0 }}
@@ -18,6 +28,8 @@ const Navigation = () => {
               className="h-8 w-auto"
             />
           </Link>
+          
+          {/* Desktop Navigation */}
           <div className="hidden sm:flex space-x-8">
             {["Why Us", "Join Us", "Contact", "FAQs"].map((item) => (
               <Link
@@ -29,7 +41,38 @@ const Navigation = () => {
               </Link>
             ))}
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className="sm:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+          >
+            <Menu className="h-6 w-6" />
+          </button>
         </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && isMobile && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="sm:hidden bg-white border-t border-gray-100"
+          >
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              {["Why Us", "Join Us", "Contact", "FAQs"].map((item) => (
+                <Link
+                  key={item}
+                  to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
       </div>
     </motion.nav>
   );
