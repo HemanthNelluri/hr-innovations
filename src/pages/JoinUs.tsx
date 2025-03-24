@@ -90,12 +90,17 @@ const JoinUs = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
         >
-          <h2 className="text-3xl font-bold mb-6">Interested in Joining Our Team?</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Send your resume and cover letter to <span className="font-semibold text-blue-600">careers@company.com</span>
-          </p>
+          <h2 className="text-3xl font-bold mb-6 text-center">Apply Now</h2>
+          <div className="flex justify-center">
+            <iframe 
+              aria-label='Job Application' 
+              frameBorder="0" 
+              style={{height:"500px", width:"99%", border:"none"}} 
+              src='https://forms.zohopublic.in/adminhrinno1/form/JobApplication/formperma/KGC6qb-9HNSJgQgGjt4uZWib6W2XvE7-MJOwne74OJ8'
+            ></iframe>
+          </div>
         </motion.div>
       </div>
     </div>
