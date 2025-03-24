@@ -21,9 +21,12 @@ const ContactHeader = () => {
       <h1 className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#1EAEDB] via-[#4a90e2] to-[#ea384c]">
         Contact Us
       </h1>
-      <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+      <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-2">
         Let's discuss how we can help transform your business
       </p>
+      <a href="mailto:Admin@hrinnovations.online" className="text-[#1EAEDB] hover:underline">
+        Admin@hrinnovations.online
+      </a>
     </motion.div>
   );
 };

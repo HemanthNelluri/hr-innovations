@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import { motion } from "framer-motion";
 import { Code, Globe, Heart, Rocket, Users } from "lucide-react";
@@ -19,9 +18,12 @@ const JoinUs = () => {
           <h1 className="text-5xl sm:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#1EAEDB] to-[#ea384c]">
             Join Our Mission
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">
             Together, we can make the internet more accessible and powerful for small and medium businesses. Join us in shaping the future of digital transformation.
           </p>
+          <a href="mailto:Admin@hrinnovations.online" className="text-[#1EAEDB] hover:underline inline-block mt-2">
+            Admin@hrinnovations.online
+          </a>
         </motion.div>
 
         <motion.div
