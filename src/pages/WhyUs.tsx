@@ -21,7 +21,7 @@ const WhyUs = () => {
           className="max-w-4xl mx-auto text-center"
         >
           <h1 className="text-4xl sm:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[#1EAEDB] to-[#ea384c]">
-            Why Choose HR Innovations?
+            Our Edge Over the Competition
           </h1>
           <p className="text-xl text-gray-600">
             Transforming Your Business Through Innovation
