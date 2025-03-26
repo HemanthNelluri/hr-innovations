@@ -1,9 +1,8 @@
-
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { motion } from "framer-motion";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +28,6 @@ const Navigation = () => {
             />
           </Link>
           
-          {/* Desktop Navigation */}
           <div className="hidden sm:flex space-x-8">
             <Link
               to="/"
@@ -37,7 +35,7 @@ const Navigation = () => {
             >
               Home
             </Link>
-            {["Why Us", "Join Us", "Contact", "FAQs"].map((item) => (
+            {["Our Edge", "Join Us", "Contact", "FAQs"].map((item) => (
               <Link
                 key={item}
                 to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
@@ -48,7 +46,6 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
             className="sm:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
@@ -57,7 +54,6 @@ const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && isMobile && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
@@ -73,7 +69,7 @@ const Navigation = () => {
               >
                 Home
               </Link>
-              {["Why Us", "Join Us", "Contact", "FAQs"].map((item) => (
+              {["Our Edge", "Join Us", "Contact", "FAQs"].map((item) => (
                 <Link
                   key={item}
                   to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}

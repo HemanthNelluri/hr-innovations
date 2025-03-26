@@ -21,7 +21,7 @@ const App = () => (
         <Sonner />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/why-us" element={<WhyUs />} />
+          <Route path="/our-edge" element={<WhyUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/join-us" element={<JoinUs />} />
