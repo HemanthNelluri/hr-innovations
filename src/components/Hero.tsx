@@ -32,19 +32,19 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="space-y-2 mb-8"
         >
-          <a 
-            href="/capability-statement.pdf" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#1EAEDB] text-white px-6 py-3 rounded-lg hover:bg-[#0FA0CE] transition-colors"
+          <Button 
+            variant="default" 
+            size="lg" 
+            className="mr-4"
+            onClick={() => window.open("/capability-statement.pdf", "_blank")}
           >
-            <Download className="h-5 w-5" />
+            <Download className="mr-2 h-4 w-4" />
             Download Capability Statement
-          </a>
+          </Button>
           <Link to="/contact">
-            <button className="border border-[#ea384c] text-[#ea384c] px-8 py-3 rounded-lg hover:bg-[#ea384c] hover:text-white transition-colors">
+            <Button variant="outline">
               Contact Us
-            </button>
+            </Button>
           </Link>
         </motion.div>
       </div>
