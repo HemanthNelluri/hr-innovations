@@ -1,8 +1,7 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Download, FilePdf } from "lucide-react";
+import { Download } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -38,7 +37,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#1EAEDB] text-white px-6 py-3 rounded-lg hover:bg-[#0FA0CE] transition-colors"
           >
-            <FilePdf className="h-5 w-5" />
+            <Download className="h-5 w-5" />
             Download Capability Statement
           </a>
           <Link to="/contact">
