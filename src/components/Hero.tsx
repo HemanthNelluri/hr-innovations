@@ -33,9 +33,9 @@ const Hero = () => {
           className="space-y-2 mb-8"
         >
           <Button 
-            variant="red"
+            variant="destructive"
             size="lg" 
-            className="mr-4 transition-transform duration-300 hover:scale-200"
+            className="mr-4 transition-transform duration-300 hover:scale-110"
             onClick={() => window.open("/capability-statement.pdf", "_blank")}
           >
             <Download className="mr-2 h-4 w-4" />
@@ -43,8 +43,8 @@ const Hero = () => {
           </Button>
           <Link to="/contact">
             <Button 
-              variant="red" 
-              className="transition-transform duration-300 hover:scale-200"
+              variant="destructive" 
+              className="transition-transform duration-300 hover:scale-110"
             >
               Contact Us
             </Button>
