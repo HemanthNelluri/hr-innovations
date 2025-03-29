@@ -33,7 +33,7 @@ const Hero = () => {
           className="space-y-2 mb-8"
         >
           <Button 
-            variant="default" 
+            variant="destructive"  // Changed from "default" to "destructive" for red color
             size="lg" 
             className="mr-4"
             onClick={() => window.open("/capability-statement.pdf", "_blank")}
@@ -53,3 +53,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
