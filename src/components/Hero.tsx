@@ -35,14 +35,17 @@ const Hero = () => {
           <Button 
             variant="destructive"
             size="lg" 
-            className="mr-4"
+            className="mr-4 transition-transform duration-300 hover:scale-105"
             onClick={() => window.open("/capability-statement.pdf", "_blank")}
           >
             <Download className="mr-2 h-4 w-4" />
             Download Capability Statement
           </Button>
           <Link to="/contact">
-            <Button variant="destructive">
+            <Button 
+              variant="destructive" 
+              className="transition-transform duration-300 hover:scale-105"
+            >
               Contact Us
             </Button>
           </Link>
