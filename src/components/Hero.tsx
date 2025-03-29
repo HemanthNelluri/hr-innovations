@@ -35,7 +35,7 @@ const Hero = () => {
           <Button 
             variant="destructive"
             size="lg" 
-            className="mr-4 transition-transform duration-300 hover:scale-105"
+            className="mr-4 transition-transform duration-300 hover:scale-130"
             onClick={() => window.open("/capability-statement.pdf", "_blank")}
           >
             <Download className="mr-2 h-4 w-4" />
@@ -44,7 +44,7 @@ const Hero = () => {
           <Link to="/contact">
             <Button 
               variant="destructive" 
-              className="transition-transform duration-300 hover:scale-105"
+              className="transition-transform duration-300 hover:scale-130"
             >
               Contact Us
             </Button>
