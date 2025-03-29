@@ -44,7 +44,7 @@ const Hero = () => {
           <Link to="/contact">
             <Button 
               variant="destructive" 
-              className="transition-transform duration-300 hover:scale-110"
+              className="transition-transform duration-300 hover:scale-110 bg-red-500 text-white"
             >
               Contact Us
             </Button>
