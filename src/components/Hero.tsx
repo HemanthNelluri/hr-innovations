@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -33,7 +32,7 @@ const Hero = () => {
           className="space-y-2 mb-8"
         >
           <Button 
-            variant="destructive"  // Changed from "default" to "destructive" for red color
+            variant="destructive"
             size="lg" 
             className="mr-4"
             onClick={() => window.open("/capability-statement.pdf", "_blank")}
@@ -42,7 +41,7 @@ const Hero = () => {
             Download Capability Statement
           </Button>
           <Link to="/contact">
-            <Button variant="outline">
+            <Button variant="destructive">
               Contact Us
             </Button>
           </Link>
@@ -53,4 +52,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
