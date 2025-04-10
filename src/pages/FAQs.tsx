@@ -7,7 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { HelpCircle, Search, Plus, Minus } from "lucide-react";
+import { HelpCircle, Search } from "lucide-react";
 
 const FAQs = () => {
   const faqs = [
@@ -96,25 +96,6 @@ const FAQs = () => {
               </Accordion>
             </motion.div>
           ))}
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="max-w-3xl mx-auto mt-16 text-center"
-        >
-          <p className="text-gray-600">
-            Still have questions? {" "}
-            <motion.a
-              href="/contact"
-              className="text-[#1EAEDB] font-medium hover:text-[#ea384c] transition-colors relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#ea384c] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
-              whileHover={{ y: -2 }}
-              transition={{ duration: 0.2 }}
-            >
-              Contact our team
-            </motion.a>
-          </p>
         </motion.div>
       </div>
     </div>
