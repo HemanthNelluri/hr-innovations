@@ -3,17 +3,11 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import CoreValues from "@/components/CoreValues";
 import Services from "@/components/Services";
-import VideoPlayer from "@/components/VideoPlayer";
 import { motion } from "framer-motion";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white relative">
-      <VideoPlayer 
-        src="/seo_ranking_factors_2025_final.mp4" 
-        isBackground={true} 
-      />
-      
       <div className="relative z-10">
         <Navigation />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
