@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import CoreValues from "@/components/CoreValues";
 import Services from "@/components/Services";
+import VideoPlayer from "@/components/VideoPlayer";
 import { motion } from "framer-motion";
 
 const Index = () => {
@@ -20,6 +21,31 @@ const Index = () => {
         <Hero />
         <CoreValues />
         <Services />
+        
+        <motion.section
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-10 bg-white/90 backdrop-blur-sm"
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4 text-[#1EAEDB]">SEO Ranking Factors 2025</h2>
+              <p className="text-gray-600 leading-relaxed">
+                Watch our informative video about the latest SEO ranking factors that will shape digital success in 2025.
+              </p>
+            </div>
+            
+            <div className="mb-16">
+              <VideoPlayer 
+                src="/seo_ranking_factors_2025_final.mp4" 
+                title="SEO Ranking Factors 2025" 
+              />
+            </div>
+          </div>
+        </motion.section>
+        
         <motion.section
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
