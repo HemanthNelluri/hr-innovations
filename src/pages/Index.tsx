@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import CoreValues from "@/components/CoreValues";
@@ -9,15 +10,22 @@ const Index = () => {
     <div className="min-h-screen bg-white relative">
       <div className="relative z-10">
         <Navigation />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
+          <img 
+            src="/lovable-uploads/bd84d8d9-cdc0-4390-a933-da7b0f4f150e.png" 
+            alt="HR Innovations Logo" 
+            className="w-[600px] h-auto"
+          />
+        </div>
         
-        {/* Google Algorithm Ranking Factors Image at Top */}
-        <div className="flex justify-center items-center py-10">
-          <motion.img
+        {/* Google Algorithm Ranking Factors Watermark */}
+        <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-20 pointer-events-none bg-gradient-to-br from-[#1A1F2C]/40 to-[#8B5CF6]/40 backdrop-blur-md rounded-xl overflow-hidden">
+          <motion.img 
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            animate={{ opacity: 0.4, scale: 1 }}
             transition={{ duration: 1.5 }}
-            src="/lovable-uploads/4d69a44f-3e29-47dd-a73e-b426f82d4771.png"
-            alt="Google Algorithm Ranking Factors 2025"
+            src="/lovable-uploads/4d69a44f-3e29-47dd-a73e-b426f82d4771.png" 
+            alt="Google Algorithm Ranking Factors 2025" 
             className="w-[800px] h-auto mix-blend-multiply"
           />
         </div>
