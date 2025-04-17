@@ -10,16 +10,18 @@ const Index = () => {
       <div className="relative z-10">
         <Navigation />
         
-        {/* Adjusted Image Section */}
+        {/* Google Algorithm Ranking Factors Image at Top */}
         <div className="flex justify-center items-center py-10">
-          <img
-            src="/lovable-uploads/bd84d8d9-cdc0-4390-a933-da7b0f4f150e.png"
-            alt="HR Innovations Logo"
-            className="w-[600px] h-auto"
+          <motion.img
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.5 }}
+            src="/lovable-uploads/4d69a44f-3e29-47dd-a73e-b426f82d4771.png"
+            alt="Google Algorithm Ranking Factors 2025"
+            className="w-[800px] h-auto mix-blend-multiply"
           />
         </div>
         
-        {/* Removed Overlapping Positioning */}
         <Hero />
         <CoreValues />
         <Services />
