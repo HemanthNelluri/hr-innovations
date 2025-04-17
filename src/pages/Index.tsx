@@ -19,7 +19,7 @@ const Index = () => {
         </div>
         
         {/* Google Algorithm Ranking Factors Watermark */}
-        <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-20 pointer-events-none bg-gradient-to-br from-[#1A1F2C]/40 to-[#8B5CF6]/40 backdrop-blur-md rounded-xl overflow-hidden">
+        <div className="absolute top-1/8 left-1/3 transform -translate-x-142 -translate-y-1/4 opacity-20 pointer-events-none bg-gradient-to-br from-[#1A1F2C]/40 to-[#8B5CF6]/40 backdrop-blur-md rounded-xl overflow-hidden">
           <motion.img 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 0.4, scale: 1 }}
