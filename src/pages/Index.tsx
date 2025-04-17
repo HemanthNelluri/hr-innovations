@@ -40,6 +40,39 @@ const Index = () => {
             </div>
           </div>
         </motion.section>
+        
+        <motion.section
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-16 bg-gray-50"
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-[#1EAEDB]">Google Algorithm Ranking Factors 2025</h2>
+              <p className="mt-4 text-lg text-gray-600">
+                Stay ahead of the competition with our comprehensive understanding of Google's ranking factors
+              </p>
+            </div>
+            
+            <div className="flex justify-center">
+              <div className="max-w-4xl">
+                <img 
+                  src="/lovable-uploads/4d69a44f-3e29-47dd-a73e-b426f82d4771.png" 
+                  alt="Google Algorithm Ranking Factors 2025" 
+                  className="w-full h-auto rounded-lg shadow-xl"
+                />
+              </div>
+            </div>
+            
+            <div className="mt-10 max-w-3xl mx-auto text-center">
+              <p className="text-gray-600">
+                Our team stays at the forefront of SEO technology, implementing these critical ranking factors to maximize your digital presence and search engine performance.
+              </p>
+            </div>
+          </div>
+        </motion.section>
       </div>
     </div>
   );
