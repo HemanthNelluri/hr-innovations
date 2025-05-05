@@ -55,14 +55,15 @@ const WhyUs = () => {
               <h3 className="text-2xl font-bold text-[#1EAEDB] mb-1">HEMANTH</h3>
               <p className="text-lg font-medium text-gray-700 mb-4">Founder & CTO, HR Innovations</p>
               <p className="text-gray-600 mb-4">
-                With over 15 years of experience in technology and business transformation, Hemanth has pioneered innovative solutions 
+                With over 2 years of experience in technology and business transformation, Hemanth has pioneered innovative solutions 
                 across multiple industries. His unique approach combines technical expertise with strategic vision, allowing HR Innovations 
-                to deliver solutions that not only address current needs but anticipate future challenges.
+                to deliver solutions that not only address current needs but anticipate future challenges which are interlinked with W3 protocols and current white paper solutions.
               </p>
               <p className="text-gray-600">
-                Hemanth holds multiple patents in AI and machine learning technologies. Under his leadership, 
-                HR Innovations has grown from a startup to an industry leader, partnering with Fortune 500 companies 
-                to revolutionize their digital transformation journeys.
+               Hemanth has successfully led multiple projects across diverse domains, ranging from NAS implementation to developing a steganography program for WLAN security.
+At HR Innovations, <br> we are committed to driving technological excellence while prioritizing privacy and data security. Our expertise ensures that clients’ digital assets remain </br> secure while meeting their technical expectations with precision and innovation.
+By combining advanced solutions with a strong focus on security and reliability, HR Innovations empowers businesses to navigate an ever-evolving digital landscape with confidence
+ 
               </p>
             </div>
           </div>
