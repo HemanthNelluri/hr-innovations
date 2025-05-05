@@ -18,8 +18,8 @@ const Index = () => {
           />
         </div>
         
-        {/* Google Algorithm Ranking Factors Image - Now positioned as a featured element */}
-        <div className="mb-24 pt-20 flex justify-center">
+        {/* Google Algorithm Ranking Factors Image - Positioned to complement layout */}
+        <div className="pt-16 pb-6 flex justify-end mr-6">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -32,7 +32,7 @@ const Index = () => {
               transition={{ duration: 1.2 }}
               src="/lovable-uploads/4d69a44f-3e29-47dd-a73e-b426f82d4771.png" 
               alt="Google Algorithm Ranking Factors 2025" 
-              className="w-[800px] h-auto rounded-lg"
+              className="w-[400px] h-auto rounded-lg"
             />
           </motion.div>
         </div>
