@@ -6,7 +6,7 @@ import { Download } from "lucide-react";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 relative">
+    <div className="flex flex-col items-center justify-center px-4 py-12 relative">
       <div className="text-center max-w-4xl mx-auto">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}

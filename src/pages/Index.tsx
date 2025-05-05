@@ -18,13 +18,13 @@ const Index = () => {
           />
         </div>
         
-        {/* Google Algorithm Ranking Factors Image */}
-        <div className="absolute top-[12%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none rounded-xl overflow-hidden shadow-xl">
+        {/* Google Algorithm Ranking Factors Image - Now positioned as a featured element */}
+        <div className="mb-24 pt-20 flex justify-center">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
-            className="relative bg-gradient-to-br from-[#1A1F2C] to-[#8B5CF6] p-1 rounded-xl"
+            className="relative bg-gradient-to-br from-[#1A1F2C] to-[#8B5CF6] p-1 rounded-xl shadow-xl"
           >
             <motion.img 
               initial={{ scale: 0.95 }}
@@ -32,7 +32,7 @@ const Index = () => {
               transition={{ duration: 1.2 }}
               src="/lovable-uploads/4d69a44f-3e29-47dd-a73e-b426f82d4771.png" 
               alt="Google Algorithm Ranking Factors 2025" 
-              className="w-[900px] h-auto rounded-lg"
+              className="w-[800px] h-auto rounded-lg"
             />
           </motion.div>
         </div>
