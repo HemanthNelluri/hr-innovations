@@ -1,6 +1,7 @@
 
 import Navigation from "@/components/Navigation";
 import { motion } from "framer-motion";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const WhyUs = () => {
   return (
@@ -28,11 +29,50 @@ const WhyUs = () => {
           </p>
         </motion.div>
 
+        {/* Leadership Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="max-w-4xl mx-auto mt-16 bg-white rounded-xl shadow-sm p-8"
+        >
+          <h2 className="text-2xl font-bold mb-6 text-[#1EAEDB]">Leadership</h2>
+          
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="w-64 h-64 rounded-lg overflow-hidden shadow-lg flex-shrink-0"
+            >
+              <img 
+                src="/lovable-uploads/fd5a99e6-14c7-4f6d-9fac-462457abc1ae.png" 
+                alt="Hemanth - CTO and Founder" 
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+            <div className="flex-1">
+              <h3 className="text-2xl font-bold text-[#1EAEDB] mb-1">HEMANTH</h3>
+              <p className="text-lg font-medium text-gray-700 mb-4">Founder & CTO, HR Innovations</p>
+              <p className="text-gray-600 mb-4">
+                With over 15 years of experience in technology and business transformation, Hemanth has pioneered innovative solutions 
+                across multiple industries. His unique approach combines technical expertise with strategic vision, allowing HR Innovations 
+                to deliver solutions that not only address current needs but anticipate future challenges.
+              </p>
+              <p className="text-gray-600">
+                Hemanth holds multiple patents in AI and machine learning technologies. Under his leadership, 
+                HR Innovations has grown from a startup to an industry leader, partnering with Fortune 500 companies 
+                to revolutionize their digital transformation journeys.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-4xl mx-auto mt-16 bg-white rounded-xl shadow-sm p-8"
+          className="max-w-4xl mx-auto mt-10 bg-white rounded-xl shadow-sm p-8"
         >
           <h2 className="text-2xl font-bold mb-6 text-[#1EAEDB]">Our Core Values</h2>
           
