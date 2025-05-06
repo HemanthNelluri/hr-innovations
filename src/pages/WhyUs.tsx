@@ -55,15 +55,16 @@ const WhyUs = () => {
               <h3 className="text-2xl font-bold text-[#1EAEDB] mb-1">HEMANTH</h3>
               <p className="text-lg font-medium text-gray-700 mb-4">Founder & CTO, HR Innovations</p>
               <p className="text-gray-600 mb-4">
-                With over 2 years of experience in technology and business transformation, Hemanth has pioneered innovative solutions 
-                across multiple industries. His unique approach combines technical expertise with strategic vision, allowing HR Innovations 
-                to deliver solutions that not only address current needs but anticipate future challenges which are interlinked with W3 protocols and current white paper solutions.
+                With two years of experience in technology, Hemanth leads HR Innovations with a focus on delivering 
+                innovative web solutions. As a new startup, we bring fresh perspectives and agile approaches to 
+                digital challenges faced by small and medium businesses.
               </p>
               <p className="text-gray-600">
-               Hemanth has successfully led multiple projects across diverse domains, ranging from NAS implementation to developing a steganography program for WLAN security.
-At HR Innovations, <br> we are committed to driving technological excellence while prioritizing privacy and data security. Our expertise ensures that clients’ digital assets remain </br> secure while meeting their technical expectations with precision and innovation.
-By combining advanced solutions with a strong focus on security and reliability, HR Innovations empowers businesses to navigate an ever-evolving digital landscape with confidence
- 
+                Hemanth has worked on various projects including NAS implementation and developing steganography 
+                programs for WLAN security. At HR Innovations, we specialize in developing W3 sites and are committed 
+                to helping businesses establish effective online presences while prioritizing privacy and data security.
+                As a young company, we're focused on building strong client relationships and delivering tailored solutions 
+                that grow with your business needs.
               </p>
             </div>
           </div>
