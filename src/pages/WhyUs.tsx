@@ -2,6 +2,8 @@
 import Navigation from "@/components/Navigation";
 import { motion } from "framer-motion";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+import { Handshake, Award, Users, Check } from "lucide-react";
 
 const WhyUs = () => {
   return (
@@ -27,6 +29,90 @@ const WhyUs = () => {
           <p className="text-xl text-gray-600">
             Transforming Your Business Through Innovation
           </p>
+        </motion.div>
+
+        {/* Core Values Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="max-w-4xl mx-auto mt-10 bg-white rounded-xl shadow-sm p-8"
+        >
+          <h2 className="text-2xl font-bold mb-6 text-[#1EAEDB]">Our Core Values</h2>
+          
+          <p className="text-lg mb-8">
+            At HR Innovations, we build our foundation on four essential pillars:
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="bg-gray-50 rounded-lg p-6 flex items-start space-x-4"
+            >
+              <div className="bg-[#1EAEDB]/10 p-3 rounded-full">
+                <Handshake className="h-8 w-8 text-[#1EAEDB]" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2 text-[#1EAEDB]">Integrity</h3>
+                <p className="text-gray-600">
+                  We maintain the highest standards of honesty and transparency
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="bg-gray-50 rounded-lg p-6 flex items-start space-x-4"
+            >
+              <div className="bg-[#1EAEDB]/10 p-3 rounded-full">
+                <Award className="h-8 w-8 text-[#1EAEDB]" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2 text-[#1EAEDB]">Innovation</h3>
+                <p className="text-gray-600">
+                  We constantly push boundaries to deliver cutting-edge solutions
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="bg-gray-50 rounded-lg p-6 flex items-start space-x-4"
+            >
+              <div className="bg-[#1EAEDB]/10 p-3 rounded-full">
+                <Users className="h-8 w-8 text-[#1EAEDB]" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2 text-[#1EAEDB]">Customer-Centricity</h3>
+                <p className="text-gray-600">
+                  Your success is our priority
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="bg-gray-50 rounded-lg p-6 flex items-start space-x-4"
+            >
+              <div className="bg-[#1EAEDB]/10 p-3 rounded-full">
+                <Check className="h-8 w-8 text-[#1EAEDB]" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-2 text-[#1EAEDB]">Excellence</h3>
+                <p className="text-gray-600">
+                  We strive for perfection in every project we undertake
+                </p>
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
 
         {/* Leadership Section */}
@@ -68,77 +154,6 @@ const WhyUs = () => {
               </p>
             </div>
           </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-4xl mx-auto mt-10 bg-white rounded-xl shadow-sm p-8"
-        >
-          <h2 className="text-2xl font-bold mb-6 text-[#1EAEDB]">Our Core Values</h2>
-          
-          <p className="text-lg mb-8">
-            At HR Innovations, we build our foundation on four essential pillars:
-          </p>
-          
-          <ul className="space-y-6">
-            <motion.li
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex items-start"
-            >
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold mb-2 text-[#1EAEDB]">Integrity</h3>
-                <p className="text-gray-600">
-                  We maintain the highest standards of honesty and transparency
-                </p>
-              </div>
-            </motion.li>
-
-            <motion.li
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex items-start"
-            >
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold mb-2 text-[#1EAEDB]">Innovation</h3>
-                <p className="text-gray-600">
-                  We constantly push boundaries to deliver cutting-edge solutions
-                </p>
-              </div>
-            </motion.li>
-
-            <motion.li
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="flex items-start"
-            >
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold mb-2 text-[#1EAEDB]">Customer-Centricity</h3>
-                <p className="text-gray-600">
-                  Your success is our priority
-                </p>
-              </div>
-            </motion.li>
-
-            <motion.li
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="flex items-start"
-            >
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold mb-2 text-[#1EAEDB]">Excellence</h3>
-                <p className="text-gray-600">
-                  We strive for perfection in every project we undertake
-                </p>
-              </div>
-            </motion.li>
-          </ul>
         </motion.div>
       </div>
     </div>
