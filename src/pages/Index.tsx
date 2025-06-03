@@ -18,25 +18,6 @@ const Index = () => {
           />
         </div>
         
-        {/* Google Algorithm Ranking Factors Image - Positioned to complement layout */}
-        <div className="pt-16 pb-6 flex justify-end mr-6">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.5 }}
-            className="relative bg-gradient-to-br from-[#1A1F2C] to-[#8B5CF6] p-1 rounded-xl shadow-xl"
-          >
-            <motion.img 
-              initial={{ scale: 0.95 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 1.2 }}
-              src="/lovable-uploads/4d69a44f-3e29-47dd-a73e-b426f82d4771.png" 
-              alt="Google Algorithm Ranking Factors 2025" 
-              className="w-[400px] h-auto rounded-lg"
-            />
-          </motion.div>
-        </div>
-        
         <Hero />
         <CoreValues />
         <Services />
@@ -49,14 +30,39 @@ const Index = () => {
           className="py-20 bg-white/90 backdrop-blur-sm"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-8 text-[#1EAEDB]">Our Approach</h2>
-              <p className="text-gray-600 leading-relaxed">
-                We take a holistic, consultative approach that addresses all operational facets of your business. 
-                By understanding your unique challenges and goals, we develop tailored strategies that streamline 
-                processes and drive sustainable growth. Our commitment to excellence ensures that every solution 
-                we deliver is scalable, efficient, and aligned with your business objectives.
-              </p>
+            <div className="flex flex-col lg:flex-row items-start gap-12">
+              <div className="flex-1">
+                <h2 className="text-3xl font-bold mb-8 text-[#1EAEDB]">Our Approach</h2>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  We take a holistic, consultative approach that addresses all operational facets of your business. 
+                  By understanding your unique challenges and goals, we develop tailored strategies that streamline 
+                  processes and drive sustainable growth.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  Our commitment to excellence ensures that every solution we deliver is scalable, efficient, and 
+                  aligned with your business objectives. We stay current with the latest industry trends and 
+                  algorithm updates to keep your digital presence competitive.
+                </p>
+              </div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.2 }}
+                viewport={{ once: true }}
+                className="lg:w-96 flex-shrink-0"
+              >
+                <div className="relative bg-gradient-to-br from-[#1A1F2C] to-[#8B5CF6] p-1 rounded-xl shadow-xl">
+                  <img 
+                    src="/lovable-uploads/4d69a44f-3e29-47dd-a73e-b426f82d4771.png" 
+                    alt="Google Algorithm Ranking Factors 2025" 
+                    className="w-full h-auto rounded-lg"
+                  />
+                  <div className="absolute -bottom-2 -right-2 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1 shadow-lg">
+                    <span className="text-xs font-medium text-gray-700">Latest 2025 Updates</span>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </motion.section>
